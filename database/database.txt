@@ -1,0 +1,21 @@
+Movies
+    movie_id,
+    "_id": "5cd95395de30eff6ebccde56",
+    "name": "The Lord of the Rings Series",
+    "runtimeInMinutes": 558,
+    "budgetInMillions": 281,
+Quotes
+    quote_id,
+    "_id": "5cd96e05de30eff6ebcce7e9",
+    "dialog": "Deagol!",
+    "movie": "5cd95395de30eff6ebccde5d",
+    "character": "5cd99d4bde30eff6ebccfe9e",
+    "id": "5cd96e05de30eff6ebcce7e9"
+
+Characters
+    character_id,
+    "_id": "5cd99d4bde30eff6ebccfbbe",
+    "height": "",
+    "race": "Human",
+    "name": "Adanel",
+    "wikiUrl": "http://lotr.wikia.com//wiki/Adanel"

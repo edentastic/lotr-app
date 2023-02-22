@@ -1,7 +1,10 @@
 package com.techelevator.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Movie {
     private int movieId;
+    @JsonProperty("_id")
     private String theOneMovieId;
     private String name;
     private int runtimeInMinutes;

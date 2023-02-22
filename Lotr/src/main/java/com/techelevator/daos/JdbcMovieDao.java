@@ -3,10 +3,12 @@ package com.techelevator.daos;
 import com.techelevator.models.Movie;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class JdbcMovieDao implements MovieDao{
 
     private JdbcTemplate jdbcTemplate;

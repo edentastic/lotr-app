@@ -1,7 +1,10 @@
 package com.techelevator.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Character {
     private int characterId;
+    @JsonProperty("_id")
     private String theOneCharacterId;
     private String height;
     private String race;

@@ -1,10 +1,15 @@
 package com.techelevator.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Quote {
     private int quoteId;
+    @JsonProperty("_id")
     private String theOneQuoteId;
     private String dialog;
+    @JsonProperty("movie")
     private String theOneMovieId;
+    @JsonProperty("character")
     private String theOneCharacterId;
 
     public Quote() {

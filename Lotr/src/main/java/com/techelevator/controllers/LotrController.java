@@ -6,6 +6,7 @@ import com.techelevator.models.Movie;
 import com.techelevator.models.Quote;
 import com.techelevator.services.LotrService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
@@ -45,9 +46,15 @@ public class LotrController {
         return movieDao.getMovieById(id);
     }
 
-    @PostMapping(path = "/saved/movie")
-    public Movie addMovieToDb(Movie movie){
+    @PostMapping(path = "/add-movie")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Movie addMovieToDb(@RequestBody Movie movie){
         return movieDao.addNewMovie(movie);
+    }
+
+    @GetMapping("/quotesByMovie/{id}")
+    public List<Quote> getAllQuotesByMovieIdFromApi(@PathVariable String id){
+        return service.getAllQuotesByMovieId(id);
     }
 
 }

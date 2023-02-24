@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import MoviesView from '../views/MoviesView.vue'
+import MovieQuote from '../views/MovieQuote.vue'
 
 Vue.use(VueRouter)
 
@@ -23,6 +24,11 @@ const routes = [
     path: '/movies',
     name: 'movies',
     component: MoviesView
+  },
+  {
+    path: 'movies/{id}/quotes',
+    name: 'movie-quote',
+    component: MovieQuote
   }
 ]
 

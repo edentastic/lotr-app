@@ -22,7 +22,7 @@ public class JdbcMovieDao implements MovieDao{
         String sql = "INSERT INTO movie (the_one_movie_id, name, runtime_in_minutes, budget_in_millions) " +
                 "VALUES (?,?,?,?) " +
                 "RETURNING movie_id ";
-        Integer id = jdbcTemplate.queryForObject(sql, Integer.class, movie.getTheOneMovieId(),movie.getName(),movie.getRuntimeInMinutes(),movie.getRuntimeInMinutes());
+        Integer id = jdbcTemplate.queryForObject(sql, Integer.class, movie.getTheOneMovieId(),movie.getName(),movie.getRuntimeInMinutes(),movie.getBudgetInMillions());
         return getMovieById(id);
     }
 

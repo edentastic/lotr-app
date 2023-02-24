@@ -2,11 +2,11 @@
   <div>
      <h1>Movies</h1>
      <div class="movie-container" >
-      <movie-content 
-      v-for="movie in movies" 
-      :key="movie._id" 
-      :movie="movie" 
-      />
+          <movie-content 
+          v-for="movie in movies" 
+          :key="movie._id" 
+          :movie="movie"           
+          />
      </div>
   </div>
 </template>

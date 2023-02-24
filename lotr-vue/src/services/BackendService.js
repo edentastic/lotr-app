@@ -7,5 +7,11 @@ const http = axios.create({
 export default {
     viewMoviesFromAPI() {
         return http.get('/movie');
+    },
+    addMovieToDatabase(movie) {
+        return http.post('/add-movie', movie);
+    },
+    getAllQuotesByMovieId(id) {
+        return http.get(`/quotesByMovie/${id}`);
     }
 }

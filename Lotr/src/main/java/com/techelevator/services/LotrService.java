@@ -88,6 +88,15 @@ public class LotrService {
         return Arrays.asList(quotes);
     }
 
+    public List<Quote> getAllQuotesByMovieId(String id){
+        ResponseEntity<QuoteDocs> responseEntity =
+                restTemplate.exchange(LOTR_API+"/movie/"+ id + "/quote", HttpMethod.GET, makeEntity(), QuoteDocs.class);
+        QuoteDocs quoteDocs = responseEntity.getBody();
+        Quote[] quotes = quoteDocs.getQuotes();
+
+        return Arrays.asList(quotes);
+    }
+
     private HttpEntity<Void> makeEntity(){
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(KEY);
